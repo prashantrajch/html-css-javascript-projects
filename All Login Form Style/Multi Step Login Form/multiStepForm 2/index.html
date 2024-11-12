@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="./index.css">
+    <title>Multi Signup Form</title>
+</head>
+
+<body>
+    <h2 class="topHeading">Multi Step Form with Step Progress</h2>
+    <div class="container">
+        <div class="box">
+            <h2>Signup Form</h2>
+            <div class="progressBar">
+                <div class="step">
+                    <p>Name</p>
+                    <div class="bullet">
+                        <span>1</span>
+                        <i class="fas fa-check check"></i>
+                    </div>
+                </div>
+                <div class="step">
+                    <p>Contact</p>
+                    <div class="bullet">
+                        <span>2</span>
+                        <i class="fas fa-check check"></i>
+                    </div>
+                </div>
+                <div class="step">
+                    <p>Birth</p>
+                    <div class="bullet">
+                        <span>3</span>
+                        <i class="fas fa-check check"></i>
+                    </div>
+                </div>
+                <div class="step">
+                    <p>Submit</p>
+                    <div class="bullet">
+                        <span>4</span>
+                        <i class="fas fa-check check"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider">
+                <div class="slide">
+                    <p class="title">Basic Info:</p>
+                    <div class="formField">
+                        <div class="input">
+                            <input type="text" id="fname" required>
+                            <label for="fname">First Name</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" id="lname" required>
+                            <label for="lname">Last Name</label>
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <button class="nextBtn">Next</button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <p class="title">Contact Info:</p>
+                    <div class="formField">
+                        <div class="input">
+                            <input type="text" id="email" required>
+                            <label for="email">Email Address</label>
+                        </div>
+                        <div class="input">
+                            <input type="number" id="phonenumber" required>
+                            <label for="phonenumber">Phone</label>
+                        </div>
+                    </div>
+                    <div class="btn active">
+                        <button class="prevBtn">Previous</button>
+                        <button class="nextBtn">Next</button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <p class="title">Date of Birth:</p>
+                    <div class="formField">
+                        <div class="input">
+                            <input type="date" id="date" required>
+                        </div>
+                        <div class="input">
+                            <select name="gender" id="gender">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="btn active">
+                        <button class="prevBtn">Previous</button>
+                        <button class="nextBtn">Next</button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <p class="title">Login Detail:</p>
+                    <div class="formField">
+                        <div class="input">
+                            <input type="text" id="user" required>
+                            <label for="user">Username</label>
+                        </div>
+                        <div class="input">
+                            <input type="password" id="pass" required>
+                            <label for="pass">Password</label>
+                        </div>
+                    </div>
+                    <div class="btn active">
+                        <button class="prevBtn">Previous</button>
+                        <button class="submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

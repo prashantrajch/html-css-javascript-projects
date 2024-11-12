@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Card</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            min-height: 50vh;
+            background-color: aqua;
+            padding: 0 50px;
+            display: flex;
+            align-items: center;
+        }
+        .container::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: blue;
+        }
+        .content{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            z-index: 5;
+        }
+        .card{
+            width: calc(25% - 10px);
+            /* height: 150px; */
+            background: yellow;   
+            border: 2px solid rgba(255, 255, 255, 0.6);
+        }
+
+        @media screen and (max-width: 1036px) {
+            .container{
+                padding: 50px 50px 0 50px;
+            }
+            .container .content .card{
+                width: calc(50% - 30px);
+                margin-bottom: 20px;
+            }
+        }
+
+        @media screen and (max-width: 580px) {
+            .container .content .card{
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .container{
+                padding: 30px 20px 0 20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="card">
+                <div class="counter">120</div>
+                <div class="text">Awards Received</div>
+            </div>
+            <div class="card">
+                <div class="counter">120</div>
+                <div class="text">Awards Received</div>
+            </div>
+            <div class="card">
+                <div class="counter">120</div>
+                <div class="text">Awards Received</div>
+            </div>
+            <div class="card">
+                <div class="counter">120</div>
+                <div class="text">Awards Received</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

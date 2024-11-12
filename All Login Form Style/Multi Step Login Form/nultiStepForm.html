@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="./nultiStepForm.css">
+    <title>Multi Step Form</title>
+</head>
+
+<body>
+    <h1 class="topHeading">Multi Step Form with Step Progress</h1>
+    <div class="container">
+        <div class="box">
+            <h1 class="heading">Signup Form</h1>
+            <div class="progressBar">
+                <div class="step">
+                    <p>Name</p>
+                    <div class="bullet">1</div>
+                </div>
+                <div class="step">
+                    <p>Contact</p>
+                    <div class="bullet">2</div>
+                </div>
+                <div class="step">
+                    <p>Birth</p>
+                    <div class="bullet">3</div>
+                </div>
+                <div class="step">
+                    <p>Submit</p>
+                    <div class="bullet">4</div>
+                </div>
+            </div>
+            <div class="sliderOuter">
+                <div class="sliderInner">
+                    <div class="slide">
+                        <p class="title">Basic Info:</p>
+                        <div class="inputField">
+                            <div class="input">
+                                <label for="fName">First Name</label>
+                                <input type="text" id="fName">
+                            </div>
+                            <div class="input">
+                                <label for="lName">Last Name</label>
+                                <input type="text" id="lName">
+                            </div>
+                            <div class="input btn">
+                                <button class="nextBtn">Next</button>
+                                <!-- <button class="nextBtn">Prev</button> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <p class="title">Contact Info:</p>
+                        <div class="inputField">
+                            <div class="input">
+                                <label for="email">Email Address</label>
+                                <input type="text" id="email">
+                            </div>
+                            <div class="input">
+                                <label for="phone">Phone</label>
+                                <input type="text" id="phone">
+                            </div>
+                            <div class="input width">
+                                <button class="prevBtn">Prev</button>
+                                <button class="nextBtn">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <p class="title">Date of Birth:</p>
+                        <div class="inputField">
+                            <div class="input">
+                                <label for="date">Date</label>
+                                <input type="text" id="date">
+                            </div>
+                            <div class="input">
+                                <label for="gender">Gender</label>
+                                <select name="gender" id="gender">
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="input width">
+                                <button class="prevBtn">Prev</button>
+                                <button class="nextBtn">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <p class="title">Login Detail:</p>
+                        <div class="inputField">
+                            <div class="input">
+                                <label for="username">Username</label>
+                                <input type="text" id="username">
+                            </div>
+                            <div class="input">
+                                <label for="password">password</label>
+                                <input type="text" id="password">
+                            </div>
+                            <div class="input width">
+                                <button class="prevBtn">Previous</button>
+                                <button class="submit">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./nultiStepForm.js"></script>
+</body>
+
+</html>

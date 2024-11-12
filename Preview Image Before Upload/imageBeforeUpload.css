@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.heading {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  width: 430px;
+  height: 350px;
+}
+
+.content {
+  width: 100%;
+  height: 300px;
+  border: 2px dashed lightgrey;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+.content .before{
+    width: 100%;
+    height: 100%;
+}
+
+.content .before .show{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content .before i {
+  font-size: 100px;
+  color: #9658fe;
+}
+
+.content .before p {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #5b5b7b;
+}
+
+.content .after {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: none;
+}
+
+.content .after img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* border-radius: 10px; */
+}
+
+.after .hoverimg{
+    display: none;
+}
+
+.after:hover .hoverimg{
+    display: block;
+}
+
+.after .hoverimg .afterText {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 8px 5px;
+  text-align: center;
+  color: #fff;
+  font-weight: 400;
+  background: linear-gradient(135deg, #3a8ffe 0%, #9658fe 100%);
+}
+
+.after .hoverimg i{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 25px;
+    color: #9658fe;
+    cursor: pointer;
+}
+
+.after .hoverimg i:hover{
+    color: #e74c3c;
+}
+
+/* for btn selection */
+.btn {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.btn .submit {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  background: linear-gradient(135deg, #3a8ffe 0%, #9658fe 100%);
+}

@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+    height: 100vh;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #ff7979;
+    align-items: center;
+}
+
+.wrapper{
+    max-width: 1130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.wrapper .cartNav{
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    top: -15%;
+    width: 130px;
+    padding: 13px 15px;
+    border-radius: 3px;
+    display: flex;
+    cursor: pointer;
+    justify-content: space-evenly;
+    box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+.cartNav .icon{
+    color: #ff7979;
+}
+.cartNav .icon i{
+    font-size: 20px;
+}
+.cartNav .icon span{
+    font-weight: 500;
+}
+
+.cartNav .itemCount{
+    font-size: 15px;
+    height: 23px;
+    width: 23px;
+    line-height: 22px;
+    background-color: #ffcccc;
+    color: #ff7979;
+    text-align: center;
+    border-radius: 1px solid #ffb3b3;
+    border-radius: 50%;
+}
+
+
+.wrapper .card{
+    width: calc(33% - 13px);
+    position: relative;
+    background-color: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
+.wrapper .card img{
+    width: 100%;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.card:hover img{
+    transform: scale(1.1);
+}
+
+.wrapper .card .content{
+    position: absolute;
+    width: 100%;
+    bottom: -50%;
+    background-color: #fff;    
+    padding: 10px 20px 22px 20px;
+    box-shadow: 0px --3px 10px 0px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.card:hover .content{
+    bottom: 0;
+}
+
+.card .content .row,.content .buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .row .details span{
+    font-size: 22px;
+   font-weight: 500;
+
+}
+.content .row .details p{
+    color: #333;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.content .row .price{
+    color:  #ff7979;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.content .buttons{
+    margin-top: 20px;
+}
+
+.content .buttons button{
+    width: 100%;
+    padding: 9px 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 3px;
+    border: 2px solid #ff7979;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.buttons button:first-child{
+    color: #ff7979;
+    margin-right: 10px;
+    background-color: #fff;
+}
+
+.buttons button:first-child:hover{
+    background-color: #ff7979;
+    color: #fff;
+}
+
+.buttons button:last-child{
+    color: #fff;
+    background-color: #ff7979;
+    margin-left: 10px;
+}
+.buttons button:last-child:hover{
+   border-color: #ff6666;
+    background-color: #ff6666;
+}
+
+
+
+

@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00a2ff;
+}
+
+.clock {
+  width: 250px;
+  height: 250px;
+  background-color: #e9fcfc;
+  border-radius: 50%;
+  border: 16px solid #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.clock::before {
+  content: "";
+  position: absolute;
+  width: 259px;
+  height: 259px;
+  /* border: 6px solid red; */
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+.clock::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: #59c3ff;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.center_nut,
+.center_nut2 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center_nut {
+  width: 15px;
+  height: 15px;
+  background-color: #262626;
+  z-index: 2;
+  border-radius: 50%;
+}
+.center_nut2 {
+  width: 9px;
+  height: 9px;
+  background-color: red;
+  z-index: 6;
+  border-radius: 50%;
+}
+
+.indicator div{
+    position: absolute;
+    width: 2px;
+    height: 5px;
+    background-color: #111;
+}
+
+.indicator div:nth-child(1){
+    transform: rotate(30deg) translateY(-100px);
+}
+.indicator div:nth-child(2){
+    transform: rotate(60deg) translateY(-100px);
+}
+.indicator div:nth-child(3){
+    transform: rotate(90deg) translateY(-100px);
+    background-color: red;
+}
+.indicator div:nth-child(4){
+    transform: rotate(120deg) translateY(-100px);
+}
+.indicator div:nth-child(5){
+    transform: rotate(150deg) translateY(-100px);
+}
+.indicator div:nth-child(6){
+    transform: rotate(180deg) translateY(-100px);
+    background-color: red;
+}
+.indicator div:nth-child(7){
+    transform: rotate(210deg) translateY(-100px);
+}
+.indicator div:nth-child(8){
+    transform: rotate(240deg) translateY(-100px);
+}
+.indicator div:nth-child(9){
+    transform: rotate(270deg) translateY(-100px);
+    background-color: red;
+}
+.indicator div:nth-child(10){
+    transform: rotate(300deg) translateY(-100px);
+}
+.indicator div:nth-child(11){
+    transform: rotate(330deg) translateY(-100px);
+}
+.indicator div:nth-child(12){
+    transform: rotate(360deg) translateY(-100px);
+    background-color: red;
+}
+
+.sec_hand{
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    z-index: 6;
+    animation: sec_hand 60s linear infinite;
+}
+
+.sec_hand::after{
+    content: '';
+    position: absolute;
+    height: 130px;
+    width: 3px;
+    background-color: red;
+    left: -1px;
+    bottom: -25px;
+    border-radius: 3px;
+}
+
+.sec_hand::before{
+    content: '';
+    position: absolute;
+    height: 45px;
+    width: 7px;
+    background-color: red;
+    left: -3px;
+    bottom: -55px;
+    border-radius: 3px;
+}
+
+.min_hand{
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    z-index: 4;
+    transform: rotate(0deg);
+    animation: min_hand 3600s linear infinite;
+
+}
+
+.min_hand::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    left: -3px;
+    top: -95px;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 70px solid #303030;
+}
+
+.min_hand::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 3px;
+    left: -3px;
+    top: -25px;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-top: 25px solid #303030;
+}
+
+.hour_hand{
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    z-index: 3;
+    transform: rotate(0deg);
+    animation: hour_hand 4300s linear infinite;
+}
+
+.hour_hand::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    left: -3px;
+    top: -75px;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 55px solid #303030;
+}
+
+.hour_hand::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 3px;
+    left: -3px;
+    top: -20px;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-top: 20px solid #303030;
+}
+

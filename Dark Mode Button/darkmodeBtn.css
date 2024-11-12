@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    width: 100%;
+    height: 80px;
+    /* background-color: aliceblue; */
+    border-bottom: 1px solid #111;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.6);
+}
+
+.navbar .heading{
+    font-size: 45px;
+    font-family: sans-serif;
+}
+
+.navbar .buttons{
+    width: 130px;
+    height: 40px;
+    background-color: rgb(156, 170, 182);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.navbar .buttons .toggle{
+    width: 48px;
+    height: 24px;
+    background-color: #e6e6e6;
+    border-radius: 20px;
+}
+
+.toggle input{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.toggle input::before{
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0;
+    height: 100%;
+    width: 24px;
+    background: linear-gradient(#fff,#f2f2f2,#e6e6e6,#d9d9d9);
+    border-radius: 19px;
+    transform: scale(.85);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: .5s;
+
+}
+
+input:checked{
+    background-color: #00d2e6;
+}
+
+input:checked::before{
+    left: 24px;
+}
+
+
+.content{
+    padding: 0 80px;
+    margin-top: 20px;
+}
+
+.content h1{
+    font-size: 55px;
+    font-family: sans-serif;
+}
+.content p{
+    padding: 10px 0;
+    font-size: 18px;
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 25px;
+}
+
+.content h2{
+    font-size: 45px;
+    font-family: sans-serif;
+}

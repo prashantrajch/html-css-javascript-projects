@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --pink: #ff74a4;
+    --violet: #9f6ea3;
+    --lightBlack: #515c6f;
+    --white: #ffffff;
+    --darkWhite: #cecaca;
+    --pinkShadow: #ffcbdd;
+    --lightBShadow: rgba(0,0,0,0.15);
+}
+
+.container{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: var(--darkWhite);
+}
+
+.playerBox{
+    width: 380px;
+    background: var(--white);
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px var(--lightBShadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.playerBox i{
+    cursor: pointer;
+}
+
+.topBar,.timer,.controls,.musicList .header, .musicList li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topBar i{
+    font-size: 20px;
+    color: var(--lightBlack);
+}
+
+.topBar span{
+    font-size: 18px;
+    color: var(--lightBlack);
+}
+
+.imgArea{
+    width: 100%;
+    height: 256px;
+    box-shadow: 0px 6px 12px var(--lightBShadow);
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 25px;
+}
+
+.imgArea img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.songDetails{
+    text-align: center;
+    margin: 20px 0;
+    color: var(--lightBlack);
+}
+
+.songDetails .name{
+    font-size: 21px;
+}
+
+.songDetails .artist{
+    font-size: 18px;
+    opacity: 0.6;
+}
+
+.progressArea{
+    height: 6px;
+    width: 100%;
+    background: #f0f0f0;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.progressArea .progressBar{
+    height: inherit;
+    width: 0%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, var(--pink) 0%, var(--violet) 100%);
+    position: relative;
+}
+
+.progressBar::before{
+    content: '';
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    background: inherit;
+    border-radius: inherit;
+    top: 50%;
+    right: -5px;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.progressArea:hover .progressBar::before{
+    opacity: 1;
+}
+
+.progressArea .timer{
+    margin-top: 2px;
+}
+
+.timer span{
+    font-size: 13px;
+    color: var(--lightBlack);
+}
+
+.controls{
+    margin: 40px 0 5px 0;
+}
+
+.controls i{
+    font-size: 28px;
+    user-select: none;
+    background: linear-gradient(var(--pink) 0%, var(--violet) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.controls i:nth-child(2),
+.controls i:nth-child(4){
+    font-size: 43px;
+}
+
+.controls #prev{
+    margin-right: -13px;
+}
+
+.controls #next{
+    margin-left: -13px;
+}
+
+.controls .playPause{
+    height: 54px;
+    width: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: linear-gradient(var(--white) 0%, var(--darkWhite) 100%);
+    box-shadow: 0px 0px 5px var(--pink);
+}
+
+.playPause::before{
+    content: '';
+    position: absolute;
+    height: 43px;
+    width: 43px;
+    border-radius: inherit;
+    background: linear-gradient(var(--pink) 0%, var(--violet) 100%);
+
+}
+
+.playPause i{
+    height: 43px;
+    width: 43px;
+    line-height: 43px;
+    text-align: center;
+    background: inherit;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+.musicList{
+    position: absolute;
+    left: 0;
+    bottom: -55%;
+    width: 100%;
+    background: var(--white);
+    box-shadow: 0px -5px 10px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    padding: 15px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.14s ease-in-out;
+}
+
+.musicList.show{
+    bottom: 0;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.musicList .header .row{
+    display: flex;
+    align-items: center;
+    font-size: 19px;
+    color: var(--lightBlack);
+}
+
+.header .row i{
+    cursor: default;
+}
+
+.header .row span{
+    margin-left: 5px;
+}
+
+.header #close{
+    font-size: 22px;
+    color: var(--lightBlack);
+}
+
+.musicList ul{
+    margin: 10px 0;
+    max-height: 260px;
+    overflow-y: auto;
+}
+
+.musicList ul::-webkit-scrollbar{
+    display: none;
+}
+
+.musicList ul li{
+    list-style: none;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #e5e5e5;
+    cursor: pointer;
+    color: var(--lightBlack);
+}
+
+.musicList ul li:last-child{
+    border-bottom: 0px;
+}
+
+.musicList ul li .row span{
+    font-size: 17px;
+}
+
+ul li .row p{
+    opacity: 0.9;
+}
+
+ul li .audioDuration{
+    font-size: 16px;
+
+}
+
+ul li.playing{
+    color: var(--violet);
+    pointer-events: none;
+}
+
+
+/* .playerBox .topHeading{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.topHeading .heading{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.topHeading .downIcon, .topHeading .menuIcon{
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.playerBox .imgBox{
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.imgBox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.playerBox .songDetails{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.songDetails .name{
+    font-size: 21px;
+    color: #515c6f;
+}
+
+.songDetails .artist{
+    color: #515c6f;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+.playerBox .progressArea{
+    height: 6px;
+    width: 100%;
+    border-radius: 50px;
+    background: #f0f0f0;
+    cursor: pointer;
+}
+
+.progressArea .progressBar{
+    height: inherit;
+    width: 30%;
+    border-radius: inherit;
+    background: linear-gradient(90deg,#ff74a4 0%, #9f6ea3 100%);
+    position: relative;
+}
+
+.progressBar::before{
+    content: "";
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    top: 50%;
+    right: -5px;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-50%);
+    background: inherit;
+    transition: opacity 0.2s ease;
+}
+
+.progressArea:hover .progressBar::before{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.progressArea .songTimer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2px;
+}
+
+.songTimer div{
+    font-size: 13px;
+    color: #515c6f;
+}
+
+.playerBox .controls{
+    margin: 40px 0 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.controls i{
+    font-size: 20px;
+    user-select: none;
+    background: linear-gradient(#ff74a4 0%, #9f6ea3 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.controls i:nth-child(2),
+.controls i:nth-child(4){
+    font-size: 27px;
+}
+
+.controls .playPause{
+    height: 50px;
+    width: 50px;
+    background: linear-gradient(#fff 0%, #515c6f 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px #ff74a4;
+}
+
+.controls .playPause::before{
+    content: '';
+    position: absolute;
+    height: 43px;
+    width: 43px;
+    background: linear-gradient(#ff74a4 0%, #9f6ea3 100%);
+    border-radius: inherit;
+    z-index: 1;
+}
+
+.controls .playPause i{
+    font-size: 25px;
+    z-index: 3;
+    background: inherit;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
+
+
+
+
+
+
+

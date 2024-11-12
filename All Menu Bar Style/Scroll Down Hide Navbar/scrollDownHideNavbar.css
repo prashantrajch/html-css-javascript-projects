@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    padding: 0 40px;
+    background-color: #fff;
+    box-shadow: 1px 1px 15px silver;
+    transition: top 0.5s;
+}
+
+.navbar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo h1{
+    font-size: 40px;
+    color: #0a87f5;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li{
+    margin: 0 5px;
+}
+
+.navbar ul li a{
+    padding: 10px 20px;
+    text-decoration: none;
+    color: grey;
+    font-size: 20px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+}
+.navbar a:hover{
+    box-shadow: inset 0 0 5px #0a87f5,
+    inset 0 0 10px #85c3fa,
+    inset 0 0 15px #b6dbfc;
+}
+
+.container{
+    margin: 100px 50px;
+}
+
+.container h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.container p{
+    margin-top: 10px;
+    line-height: 25px;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.container h2{
+    margin-top: 10px;
+    font-size: 40px;
+}
+
+.container ul{
+    margin-left: 30px;
+}
+.container li{
+    line-height: 25px;
+}
+
+footer{
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 80px;
+    color: #0a87f5;
+}

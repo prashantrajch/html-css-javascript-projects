@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="./customMusicplayer.css">
+    <title>Custom Music Player</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="playerBox">
+            <div class="topBar">
+                <i class="material-icons">expand_more</i>
+                <span>Now Playing</span>
+                <i class="material-icons">more_horiz</i>
+            </div>
+            <div class="imgArea">
+                <img src="" alt="">
+            </div>
+            <div class="songDetails">
+                <p class="name"></p>
+                <p class="artist"></p>
+            </div>
+            <div class="progressArea">
+                <div class="progressBar">
+                </div>
+                <div class="timer">
+                    <span class="current"></span>
+                    <span class="maxDuration"></span>
+                </div>
+                <audio src="" id="mainAudio"></audio>
+            </div>
+            <div class="controls">
+                <i class="material-icons" id="repeatPlaylist" title="playlist looped">repeat</i>
+                <i class="material-icons" id="prev">skip_previous</i>
+                <div class="playPause">
+                    <i class="material-icons">play_arrow</i>
+                </div>
+                <i class="material-icons" id="next">skip_next</i>
+                <i class="material-icons" id="moreMusic">queue_music</i>
+            </div>
+            <div class="musicList">
+                <div class="header">
+                    <div class="row">
+                        <i class="material-icons">queue_music</i>
+                        <span>Music List</span>
+                    </div>
+                    <i class="material-icons" id="close">close</i>
+                </div>
+
+                <ul>
+                    <!-- <li>
+                        <div class="row">
+                            <span>Tu Mera Dil</span>
+                            <p>Falak Shabir</p>
+                        </div>
+                        <span class="audioDuration">3:40</span>
+                    </li> -->
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="./customMusicplayer.js"></script>
+</body>
+
+</html>

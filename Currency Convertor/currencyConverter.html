@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="currencyConverter.css">
+    <title>Currency Converter</title>
+</head>
+<body>
+    <div class="container">
+        <header>Currency Converter</header>
+        <form action="#">
+            <div class="amount">
+                <p>Enter Amount</p>
+                <input type="text" value="1">
+            </div>
+            <div class="dropList">
+                <div class="from">
+                    <p>From</p>
+                    <div class="selectBox">
+                        <img src="https://countryflagsapi.com/png/US" alt="Flag Img">
+                        <select name="" id="">
+                            <!-- value put by javascript -->
+                        </select>
+                    </div>
+                </div>
+
+                <div class="icon">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+
+                <div class="to">
+                    <p>To</p>
+                    <div class="selectBox">
+                        <img src="https://countryflagsapi.com/png/IN" alt="Flag Img">
+                        <select name="" id="">
+                            <!-- value put by javascript -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="exchangeRate">1 USD = 118.16 NPR</div>
+            <button>Get Exchange Rate</button>
+        </form>
+    </div>
+
+
+    <script src="currencyConverter.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="imageSlider.css" />
+    <title>Image Slider</title>
+  </head>
+
+  <body>
+    <h1 class="heading">Image Slider by help of Javascript</h1>
+    <div class="container">
+      <div class="container">
+        <div class="slider">
+          <div class="slide_Item">
+            <img src="./Photo/photo1.jpg" alt="Nature Photo" />
+          </div>
+          <div class="slide_Item">
+            <img src="./Photo/Photo2.jpg" alt="Nature Photo" />
+          </div>
+          <div class="slide_Item">
+            <img src="./Photo/Photo3.jpg" alt="Nature Photo" />
+          </div>
+          <div class="slide_Item">
+            <img src="./Photo/Photo4.jpg" alt="Nature Photo" />
+          </div>
+          <div class="slide_Item">
+            <img src="./Photo/Photo5.jpg" alt="Nature Photo" />
+          </div>
+
+          <div class="navigation_Btn">
+            <i class="fas fa-chevron-left left" onclick="goPrev()"></i>
+            <i class="fas fa-chevron-right right" onclick="goNext()"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./imageSlider.js"></script>
+  </body>
+</html>

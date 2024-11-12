@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: #131419;
+}
+
+.clock{
+    padding: 20px;
+    box-shadow: -3px -3px 7px rgba(0, 0, 0, 0.6),
+                 3px 3px 7px rgba(0, 0, 0, 0.6);
+}
+
+#digitalClock{
+    width: 100%;
+    font-size: 60px;
+    color: cyan;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}

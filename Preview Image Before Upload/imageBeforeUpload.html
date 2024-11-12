@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="./imageBeforeUpload.css">
+    <title>Preview image before upload</title>
+</head>
+
+<body>
+    <h1 class="heading">Preview Image Before Upload</h1>
+    <div class="container">
+        <div class="content">
+            <div class="before">
+                <div class="show">
+                    <i class="fas fa-cloud-arrow-up"></i>
+                    <p class="beforeText">No file chosen,yet</p>
+
+                </div>
+            </div>
+            <div class="after">
+                    <img alt="Nature Photo">
+                    <div class="hoverimg">
+                        <p class="afterText">Preview Text</p>
+                        <i class="fas fa-close"></i>
+                    </div>
+            </div>
+        </div>
+        <div class="btn">
+            <input type="file" name="file" id="fileSelect" hidden>
+            <button class="submit">Choose a File</button>
+        </div>
+    </div>
+
+    <script src="./imageBeforeUpload.js"></script>
+</body>
+
+</html>

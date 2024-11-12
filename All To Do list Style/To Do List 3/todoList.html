@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="todoList.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>New Todo List</title>
+</head>
+<body>
+    <div class="container">
+        <div class="taskInput">
+            <input type="text" placeholder="Add a new task">
+        </div>
+        <div class="controls">
+            <div class="filters">
+                <span id="all" class="active">All</span>
+                <span id="pending">Pending</span>
+                <span id="completed">Complete</span>
+            </div>
+            <button class="clearBtn">Clear All</button>
+        </div>
+        <ul class="taskBox">
+            <li class="task">
+                <label for="1">
+                    <input type="checkbox" id="1">
+                    <p>Renew gym membership</p>
+                </label>
+                <div class="settings">
+                    <i class="uil uil-ellipsis-h"></i>
+                    <ul class="taskMenu">
+                        <li><i class="uil uil-pen"></i>Edit</li>
+                        <li><i class="uil uil-trash"></i>Delete</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script src="./todoList.js"></script>
+</body>
+</html>

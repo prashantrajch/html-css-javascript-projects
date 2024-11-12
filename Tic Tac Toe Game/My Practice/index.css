@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navBar{
+    height: 60px;
+    background-color: #6b5b95;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo p{
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.menuList{
+    margin-right: 20px;
+}
+
+.menuList ul{
+    list-style: none;
+    display: flex;
+}
+
+.menuList ul li{
+    padding: 0 5px;
+}
+
+.menuList ul li a{
+    font-size: 20px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.menuList ul li a:hover{
+    text-decoration: underline;
+    background: #837a99;
+}
+
+.container{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.container .gameContainer{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    position: relative;
+}
+
+.gameContainer .box{
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10vw;
+    font-weight: 600;
+    user-select: none;
+    cursor: pointer;
+}
+
+
+.gameContainer .box:hover{
+    background-color: #837a99;
+    color: #fff;
+}
+
+.gameContainer .bt{
+    border-top: none;
+}
+
+.gameContainer .bb{
+    border-bottom: none;
+}
+
+.gameContainer .br{
+    border-right: none;
+}
+.gameContainer .bl{
+    border-left: none;
+}
+
+.container .gameInfo{
+    margin-left: 50px;
+}
+
+.gameInfo h1{
+    font-size: 30px;
+    text-align: justify;
+    letter-spacing: 1px;
+}
+
+.gameInfo .section{
+    display: flex;
+    align-items: center;
+}
+
+.gameInfo .info{
+    font-size: 50px;
+    font-weight: 400;
+    /* width: 250px; */
+}
+
+.gameInfo .img img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.gameInfo .reset{
+    margin-left: 20px;
+    padding: 8px 12px;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 1px solid #6b5b95;
+    background: #6b5b95;
+    color: #fff;
+    cursor: pointer;
+}
+
+.reset:hover{
+    background: #837a99;
+}
+
+.line{
+    position: absolute;
+    background: black;
+    height: 5px;
+    opacity: 0;
+    background: red;
+    width: 0;
+    transition: width 1.5s ease-in-out;
+}
+
+@media screen and (max-width: 800px) {
+    .container{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .gameContainer{
+        display: grid;
+        grid-template-columns: repeat(3,20vw);
+        grid-template-rows: repeat(3,20vw);
+    }
+}

@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+body {
+  background: #dedede;
+}
+.heading {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.container{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.click {
+  background-color: #2981bc;
+  color: #fff;
+  font-family: Arial;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 15px;
+  border: 1px solid #0059b3;
+  outline: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.popup_Box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 450px;
+    background-color: #f2f2f2;
+    text-align: center;
+    align-items: center;
+    padding: 40px;
+    border: 1px solid #b3b3b3;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    /* user-select: none; */
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.none{
+    display: none;;
+}
+
+.popup_Box i{
+    font-size: 60px;
+    color: #eb9447;
+    border: 5px solid #eb9447;
+    padding: 10px 25px;
+    border-radius: 50%;
+}
+
+.popup_Box h1{
+    font-size: 30px;
+    color: #1b2631;
+    margin: 20px 0 5px 0;
+}
+.popup_Box span{
+    font-size: 23px;
+    color: #404040;
+}
+
+.popup_Box .btns{
+    margin: 40px 0 0 0;
+}
+
+.btns .btn1,.btns .btn2{
+    background: #999999;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 13px;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.btns .btn2{
+    background: #a52525;
+    margin-left: 20px;
+    border: 1px solid #cc0000;
+}
+
+.btn1:hover{
+    background-color: #8c8c8c;
+    transition: all 0.5s;
+}
+
+.btn2:hover{
+    background-color: #e60000;
+    transition: all 0.5s;
+}
