@@ -1,6 +1,6 @@
 let screen = document.getElementById('display');
 let button = document.querySelectorAll('button');
-console.log(button);
+// console.log(button);
 
 button.forEach((elem,ind) => {
     elem.addEventListener('click', () =>{
@@ -18,6 +18,6 @@ button.forEach((elem,ind) => {
         else{
             screen.value += text;
         }
-        console.log(text);
+        // console.log(text);
     })
 })
